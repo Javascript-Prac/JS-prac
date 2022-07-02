@@ -1,83 +1,84 @@
-let numOne = " ";
+let numOne = " "
 let operator = " ";
-let numTwo = " ";
+let numTwo = " "
 const $operator = document.querySelector("#operator");
 const $result = document.querySelector("#result");
+// const onClickNumber = 
 
 // 번호를 누르면 해당 번호를 문자열 상태로 더해주기
-document.querySelector("#num-0").addEventListener("click", () => {
+document.querySelector("#num-0").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "0";
+    numTwo += number;
   } else {
-    numOne += "0";
+    numOne += number;
   }
 });
 
-document.querySelector("#num-1").addEventListener("click", () => {
+document.querySelector("#num-1").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "1";
+    numTwo += number;
   } else {
-    numOne += "1";
+    numOne += number;
   }
 });
-document.querySelector("#num-2").addEventListener("click", () => {
+document.querySelector("#num-2").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "2";
+    numTwo += number;
   } else {
-    numOne += "2";
+    numOne += number;
   }
 });
-document.querySelector("#num-3").addEventListener("click", () => {
+document.querySelector("#num-3").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "3";
+    numTwo += number;
   } else {
-    numOne += "3";
+    numOne += number;
   }
 });
-document.querySelector("#num-4").addEventListener("click", () => {
+document.querySelector("#num-4").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "4";
+    numTwo += number;
   } else {
-    numOne += "4";
+    numOne += number;
   }
 });
-document.querySelector("#num-5").addEventListener("click", () => {
+document.querySelector("#num-5").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "5";
+    numTwo += number;
   } else {
-    numOne += "5";
+    numOne += number;
   }
 });
-document.querySelector("#num-6").addEventListener("click", () => {
+document.querySelector("#num-6").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "6";
+    numTwo += number;
   } else {
-    numOne += "6";
+    numOne += number;
   }
 });
-document.querySelector("#num-7").addEventListener("click", () => {
+document.querySelector("#num-7").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "7";
+    numTwo += number;
   } else {
-    numOne += "7";
+    numOne += number;
   }
 });
-document.querySelector("#num-8").addEventListener("click", () => {
+document.querySelector("#num-8").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "8";
+    numTwo += number;
   } else {
-    numOne += "8";
+    numOne += number;
   }
 });
-document.querySelector("#num-9").addEventListener("click", () => {
+document.querySelector("#num-9").addEventListener("click", (number) => {
   if (operator) {
-    numTwo += "9";
+    numTwo += number;
   } else {
-    numOne += "9";
+    numOne += number;
   }
 });
-document.querySelector("#plus").addEventListener("click", () => {});
-document.querySelector("#minus").addEventListener("click", () => {});
-document.querySelector("#multiply").addEventListener("click", () => {});
-document.querySelector("#calculate").addEventListener("click", () => {});
-document.querySelector("#clear").addEventListener("click", () => {});
+document.querySelector("#plus").addEventListener("click", (number) => {});
+document.querySelector("#minus").addEventListener("click", (number) => {});
+document.querySelector("#multiply").addEventListener("click", (number) => {});
+document.querySelector("#calculate").addEventListener("click", (number) => {});
+document.querySelector("#clear").addEventListener("click", (number) => {});
