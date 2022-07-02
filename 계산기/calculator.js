@@ -3,16 +3,14 @@ let operator = " ";
 let numTwo = " ";
 const $operator = document.querySelector("#operator");
 const $result = document.querySelector("#result");
-const onClickNumber = (number) => {
-  return () => {
-    if (operator) {
-      // 비어있다.
-      numTwo += number;
-    } else {
-      // 비어있지 않다.
-      numOne += number;
-    }
-  };
+const onClickNumber = (number) => () => {
+  if (operator) {
+    // 비어있다.
+    numTwo += number;
+  } else {
+    // 비어있지 않다.
+    numOne += number;
+  }
 };
 
 // 번호를 누르면 해당 번호를 문자열 상태로 더해주기
