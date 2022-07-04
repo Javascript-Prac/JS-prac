@@ -1,17 +1,19 @@
-let numOne = " ";
-let operator = " ";
-let numTwo = " ";
+let numOne = "";
+let operator = "";
+let numTwo = "";
 const $operator = document.querySelector("#operator");
 const $result = document.querySelector("#result");
-
 const onClickNumber = (event) => {
-  if (operator) {
-    // 비어있지 않다.
-    numTwo += event.target.textContent;
-  } else {
-    // 비어있다.
+  if (!operator) {
+    // 연산자 비어있다있다면
     numOne += event.target.textContent;
+    $result.value += event.target.textContent;
+    return;
   }
+  if (!numTwo) {
+    $result.value = ""; // 넘버투가 없다면 화면을 지워라 (넘버투 처음입력할때 화면을 비워라)
+  }
+  numTwo += event.target.textContent;
   $result.value += event.target.textContent;
 }; // 함수가 함수를 리턴하는 고차함수
 
@@ -28,6 +30,7 @@ document.querySelector("#num-7").addEventListener("click", onClickNumber);
 document.querySelector("#num-8").addEventListener("click", onClickNumber);
 document.querySelector("#num-9").addEventListener("click", onClickNumber);
 
+//고차함수
 const onClickOperator = (op) => () => {
   if (numOne) {
     operator = op;
@@ -38,7 +41,15 @@ const onClickOperator = (op) => () => {
 };
 
 document.querySelector("#plus").addEventListener("click", onClickOperator("+"));
-document.querySelector("#minus").addEventListener("click", onClickOperator("-"));
-document.querySelector("#multiply").addEventListener("click", onClickOperator("X"));
+document
+  .querySelector("#minus")
+  .addEventListener("click", onClickOperator("-"));
+document;
+document
+  .querySelector("#devide")
+  .addEventListener("click", onClickOperator("/"));
+document
+  .querySelector("#multiply")
+  .addEventListener("click", onClickOperator("*"));
 document.querySelector("#calculate").addEventListener("click", () => {});
 document.querySelector("#clear").addEventListener("click", () => {});
