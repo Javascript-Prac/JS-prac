@@ -3,4 +3,4 @@
 
 <br>
 
-<a href="https://github.com/ZeroCho/webgame-lecture">제로초 Javascript 실습 레파지토리</a>
+<a href="https://github.com/ZeroCho/webgame-lecture">제로초 Javascript 실습 레파지토리 URL</a>
