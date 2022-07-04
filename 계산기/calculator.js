@@ -51,5 +51,34 @@ document
 document
   .querySelector("#multiply")
   .addEventListener("click", onClickOperator("*"));
-document.querySelector("#calculate").addEventListener("click", () => {});
-document.querySelector("#clear").addEventListener("click", () => {});
+document.querySelector("#calculate").addEventListener("click", () => {
+  if (numTwo) {
+    switch (operator) {
+      case "+":
+        $result.value = parseInt(numOne) + parseInt(numTwo);
+        break;
+      case "-":
+        $result.value = numOne - numTwo;
+        break;
+      case "*":
+        $result.value = numOne * numTwo;
+        break;
+      case "/":
+        $result.value = numOne / numTwo;
+        break;
+      default:
+        break;
+    }
+  } else {
+    alert("숫자를 먼저 입력하세요");
+  }
+  // 더하기는 문자열 끼리 연산할 수 있으니까 parseIn 쓰고 나머지 연산자는 숫자로 바꿔주기 때문에 parseInt 쓸 필요가 없다.
+});
+
+document.querySelector("#clear").addEventListener("click", () => {
+  numOne = "";
+  operator = "";
+  numTwo = "";
+  $operator.value = "";
+  $result.value = "";
+}); // 초기 상태를 맨 처음에 몰아넣고 초기화할때는 그대로 가져오기
